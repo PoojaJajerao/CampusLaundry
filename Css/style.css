@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 *{
-  margin: 0;
+    font-family: 'Poppins', sans-serif;
+margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  
 }
 html,body{
   display: grid;
@@ -21,12 +22,12 @@ html,body{
   color: #fff;
 }
 .wrapper{
-  overflow: hidden;
-  max-width: 390px;
-  background: #fff;
-  padding: 30px;
-  border-radius: 5px;
-  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+background: #fff;
+overflow: hidden;
+max-width: 390px; 
+padding: 30px;
+border-radius: 5px;
+box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
 }
 .wrapper .title-text{
   display: flex;
@@ -74,7 +75,7 @@ html,body{
   left: 0;
   z-index: 0;
   border-radius: 5px;
-  background: -webkit-linear-gradient(left, #a445b2, #28a9e5);
+  background: -webkit-linear-gradient(left, #a445b1, #28a9e5);
   transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
 }
 input[type="radio"]{
@@ -95,13 +96,30 @@ input[type="radio"]{
   color: #000;
 }
 #login:checked ~ label.login{
-  cursor: default;
-  user-select: none;
+    user-select: none;
+    cursor: default;
+
 }
 .wrapper .form-container{
   width: 100%;
   overflow: hidden;
 }
+.form-inner form .field input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding-left: 15px;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    border-bottom-width: 2px;
+    font-size: 17px;
+    transition: all 0.3s ease;
+  }
+.form-inner form .field{
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+  }
 .form-container .form-inner{
   display: flex;
   width: 200%;
@@ -110,24 +128,10 @@ input[type="radio"]{
   width: 50%;
   transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
 }
-.form-inner form .field{
-  height: 50px;
-  width: 100%;
-  margin-top: 20px;
-}
-.form-inner form .field input{
-  height: 100%;
-  width: 100%;
-  outline: none;
-  padding-left: 15px;
-  border-radius: 5px;
-  border: 1px solid lightgrey;
-  border-bottom-width: 2px;
-  font-size: 17px;
-  transition: all 0.3s ease;
-}
+
+
 .form-inner form .field input:focus{
-  border-color: #fc83bb;
+  border-color: #8474eb;
   /* box-shadow: inset 0 0 3px #fb6aae; */
 }
 .form-inner form .field input::placeholder{
@@ -137,19 +141,19 @@ input[type="radio"]{
 form .field input:focus::placeholder{
   color: #b3b3b3;
 }
-.form-inner form .pass-link{
+.form-inner form .password-link{
   margin-top: 5px;
 }
 .form-inner form .signup-link{
   text-align: center;
   margin-top: 30px;
 }
-.form-inner form .pass-link a,
+.form-inner form .password-link a,
 .form-inner form .signup-link a{
   color: #28a9e5;
   text-decoration: none;
 }
-.form-inner form .pass-link a:hover,
+.form-inner form .password-link a:hover,
 .form-inner form .signup-link a:hover{
   text-decoration: underline;
 }
@@ -165,7 +169,7 @@ form .btn .btn-layer{
   width: 300%;
   position: absolute;
   left: -100%;
-  background: -webkit-linear-gradient(right, #a445b2, #28a9e5, #a445b2, #fa4299);
+  background: -webkit-linear-gradient(right, #a445b1, #28a9e5, #a445b2, #28a9e5);
   border-radius: 5px;
   transition: all 0.4s ease;;
 }
